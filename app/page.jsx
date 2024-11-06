@@ -9,13 +9,13 @@ const Home = () => {
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Desenvolvedor FullStack</span>
             <h1 className="h1 mb-6">
               Hello Im <br />{" "}
               <span className="text-accent">Matheus Henrique</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              +2 anos de experiência atuando com foco em NodeJS e ReactJS Atuei
+              +3 anos de experiência atuando com foco em NodeJS e ReactJS. Atuei
               no desenvolvimento e manutenção de Restful APIs, e criação de
               interfaces modernas e interativas para usuários.
             </p>
