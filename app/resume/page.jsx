@@ -1,83 +1,101 @@
 "use client";
 
-import { FaNodeJs, FaReact, FaJs } from "react-icons/fa";
 import { BiLogoTypescript } from "react-icons/bi";
-import { SiNestjs } from "react-icons/si";
-import { SiRedux } from "react-icons/si";
-import { SiNextdotjs } from "react-icons/si";
-import { SiExpress } from "react-icons/si";
-import { DiPostgresql } from "react-icons/di";
-import { DiMongodb } from "react-icons/di";
-import { DiRedis } from "react-icons/di";
+import {
+  FaAws,
+  FaDocker,
+  FaJs,
+  FaNodeJs,
+  FaPhp,
+  FaReact,
+} from "react-icons/fa";
+import {
+  SiAuth0,
+  SiExpress,
+  SiNestjs,
+  SiNextdotjs,
+  SiPrisma,
+  SiTypeorm,
+} from "react-icons/si";
 
-import { FaDocker } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
+import { DiLaravel, DiMongodb, DiPostgresql, DiRedis } from "react-icons/di";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
+  TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-  TooltipContent,
 } from "@/components/ui/tooltip";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 const about = {
-  title: "About",
-  description: "Teste teste teste teste",
-  infor: [
+  title: "Descrição",
+  data: [
     {
       fieldName: "Name",
       fieldValue: "Matheus Henrique",
     },
     {
-      fieldName: "Phone",
+      fieldName: "Telefone",
       fieldValue: "71991910098",
     },
     {
-      fieldName: "Experiencia",
+      fieldName: "Experiência",
       fieldValue: "+3 anos",
     },
     {
-      fieldName: "Nationality",
-      fieldValue: "Brazillian",
+      fieldName: "Nacionalidade",
+      fieldValue: "Brasileiro",
     },
     {
-      fieldName: "email",
+      fieldName: "Email",
       fieldValue: "matheus.mhg2@gmail.com",
     },
     {
       fieldName: "Languages",
-      fieldValue: "Portugues, English",
+      fieldValue: "Português, English",
+    },
+    {
+      fieldName: "Freelance",
+      fieldValue: "Disponível",
     },
   ],
 };
 
 const experiencies = {
-  title: "Experience",
-  description:
-    "orem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type",
+  title: "Experiências Profissionais",
   items: [
     {
-      company: "Apice Tecnologia",
-      position: "Full Stack Developer",
+      company: "Ápice Soluções",
+      position: "Desenvolvedor FullStack",
       duration: "2022 - 2024",
+      stacks: [
+        { name: "Node", icons: <FaNodeJs /> },
+        { name: "NestJS", icons: <SiNestjs /> },
+        { name: "PostgreSQL", icons: <DiPostgresql /> },
+        { name: "React", icons: <FaReact /> },
+      ],
     },
     {
       company: "Semantix",
-      position: "Full Stack Developer",
-      duration: "2024 - actual",
+      position: "Desenvolvedor Backend",
+      duration: "2024 - present",
+      stacks: [
+        { name: "Node", icons: <FaNodeJs /> },
+        { name: "Javascript", icons: <FaJs /> },
+      ],
     },
   ],
 };
 
 const education = {
-  title: "Education",
+  title: "Formações e cursos",
   items: [
     {
       instituion: "Unifacs",
-      degree: "Graduado em Análise de Sistemas (ADS)",
+      degree: "Graduado em Análise e Desenvolvimento de Sistemas",
       duration: "2021 - 2024",
     },
     {
@@ -88,7 +106,7 @@ const education = {
     {
       instituion: "freeCodeCamp",
       degree: "FrontEnd Development",
-      duration: "2023",
+      duration: "2022",
     },
     {
       instituion: "LinkedIn",
@@ -97,8 +115,8 @@ const education = {
     },
     {
       instituion: "Udemy",
-      degree: "Desenvolvimento de Software",
-      duration: "2023",
+      degree: "Desenvolvimento de Software - PHP | Laravel",
+      duration: "2022",
     },
     {
       instituion: "SENAI",
@@ -113,10 +131,6 @@ const skills = {
   description: "Tecnologias ao qual tive contato ao longo dos anos",
   items: [
     {
-      icons: <FaNodeJs />,
-      name: "NodeJs",
-    },
-    {
       icons: <FaJs />,
       name: "Javascript",
     },
@@ -125,12 +139,12 @@ const skills = {
       name: "Typescript",
     },
     {
-      icons: <SiExpress />,
-      name: "Express",
+      icons: <FaPhp />,
+      name: "PHP",
     },
     {
-      icons: <SiNestjs />,
-      name: "NestJs",
+      icons: <DiLaravel />,
+      name: "Laravel",
     },
     {
       icons: <FaReact />,
@@ -139,6 +153,14 @@ const skills = {
     {
       icons: <SiNextdotjs />,
       name: "Next",
+    },
+    {
+      icons: <SiNestjs />,
+      name: "NestJs",
+    },
+    {
+      icons: <FaNodeJs />,
+      name: "NodeJs",
     },
     {
       icons: <SiExpress />,
@@ -165,8 +187,16 @@ const skills = {
       name: "Redis",
     },
     {
-      icons: <DiMongodb />,
-      name: "MongoDB",
+      icons: <SiPrisma />,
+      name: "Prisma",
+    },
+    {
+      icons: <SiTypeorm />,
+      name: "TypeORM",
+    },
+    {
+      icons: <SiAuth0 />,
+      name: "Auth0",
     },
   ],
 };
@@ -180,33 +210,55 @@ const Resume = () => {
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
-            <TabsTrigger value="about">About Me</TabsTrigger>
+            <TabsTrigger value="experience">Experiência</TabsTrigger>
+            <TabsTrigger value="education">Formação Acadêmica</TabsTrigger>
+            <TabsTrigger value="skills">Tech Skills</TabsTrigger>
+            <TabsTrigger value="about">Sobre</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experiencies.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experiencies.description}
-                </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[400px] w-[750px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experiencies.items.map((item, index) => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[184px] pt-6 pb-3 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
-                            {item.position}
-                          </h3>
                           <div className="flex items-center gap-3">
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
+                          </div>
+                          <h3 className="text-xl max-w-[280px] min-h-[60px] text-center lg:text-left">
+                            {item.position}
+                          </h3>
+
+                          <div className="flex items-center gap-3 ">
+                            <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                              {item.stacks.map((item, index) => {
+                                return (
+                                  <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                      <Tooltip>
+                                        <TooltipTrigger className="w-full h-[30px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                          <div className=" text-3xl pb-8 group-hover:text-accent transition-all duration-300">
+                                            {item.icons}
+                                          </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                          <p className="capitalize">
+                                            {item.name}
+                                          </p>
+                                        </TooltipContent>
+                                      </Tooltip>
+                                    </TooltipProvider>
+                                  </li>
+                                );
+                              })}
+                            </ul>
                           </div>
                         </li>
                       );
@@ -225,10 +277,10 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[194px] w-[350px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-[17px] max-w-[260px] leading-normal min-h-[55px] text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -278,18 +330,19 @@ const Resume = () => {
             >
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {about.description}
-                </p>
+
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                  {about.infor.map((item, index) => {
+                  {about.data.map((item, index) => {
                     return (
                       <li
                         key={index}
                         className="flex items-center justify-center xl:justify-start gap-4"
                       >
-                        <span className="text-white/60">{item.fieldName}</span>
-                        <span className="text-xs">{item.fieldValue}</span>
+                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                        <span className="text-white/60 text-[20px]">
+                          {item.fieldName}
+                        </span>
+                        <span className="text-[15px]">{item.fieldValue}</span>
                       </li>
                     );
                   })}

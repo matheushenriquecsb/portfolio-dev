@@ -1,3 +1,4 @@
+import Photo from "@/components/Photo";
 import Socials from "@/components/Socials";
 import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
@@ -6,18 +7,20 @@ import { FiDownload } from "react-icons/fi";
 const Home = () => {
   return (
     <section className="h-full">
-      <div className="container mx-auto">
+      <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left">
             <span className="text-xl">Desenvolvedor FullStack</span>
-            <h1 className="h1 mb-6">
+            <h2 className="h1 mb-6 mt-6">
               Hello Im <br />{" "}
               <span className="text-accent">Matheus Henrique</span>
-            </h1>
+            </h2>
             <p className="max-w-[500px] mb-9 text-white/80">
-              +3 anos de experiência atuando com foco em NodeJS e ReactJS. Atuei
-              no desenvolvimento e manutenção de Restful APIs, e criação de
-              interfaces modernas e interativas para usuários.
+              +3 anos de experiência no desenvolvimento de aplicações web,
+              atuando com as stack do Node e React. Trabalhei no desenvolvimento
+              e manutenção de APIs RESTful eficientes e escaláveis, além de
+              desenvolver interfaces interativas e de alto desempenho, focadas
+              na experiência do usuário.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
@@ -36,8 +39,10 @@ const Home = () => {
               </div>
             </div>
           </div>
+          <div>
+            <Photo />
+          </div>
         </div>
-        <div>Photo</div>
       </div>
       <Stats />
     </section>
