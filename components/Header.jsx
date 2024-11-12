@@ -15,8 +15,8 @@ export const Header = () => {
         </Link>
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          <Link href={""}>
-            <Button>Hire Me</Button>
+          <Link href={"/contact"}>
+            <Button>Entre em contato</Button>
           </Link>
         </div>
         <div className="xl:hidden">

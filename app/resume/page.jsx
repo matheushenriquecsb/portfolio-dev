@@ -12,10 +12,12 @@ import {
 import {
   SiAuth0,
   SiExpress,
+  SiMongodb,
   SiNestjs,
   SiNextdotjs,
   SiPrisma,
   SiTypeorm,
+  SiVtex,
 } from "react-icons/si";
 
 import { DiLaravel, DiMongodb, DiPostgresql, DiRedis } from "react-icons/di";
@@ -85,6 +87,9 @@ const experiencies = {
       stacks: [
         { name: "Node", icons: <FaNodeJs /> },
         { name: "Javascript", icons: <FaJs /> },
+        { name: "Mongo", icons: <SiMongodb /> },
+        { name: "Docker", icons: <FaDocker /> },
+        { name: "Vtex", icons: <SiVtex /> },
       ],
     },
   ],
@@ -128,7 +133,6 @@ const education = {
 
 const skills = {
   title: "Tech Skills",
-  description: "Tecnologias ao qual tive contato ao longo dos anos",
   items: [
     {
       icons: <FaJs />,
@@ -197,6 +201,10 @@ const skills = {
     {
       icons: <SiAuth0 />,
       name: "Auth0",
+    },
+    {
+      icons: <SiVtex />,
+      name: "Vtex",
     },
   ],
 };
@@ -270,7 +278,6 @@ const Resume = () => {
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
-
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
@@ -298,9 +305,6 @@ const Resume = () => {
               <div className="flex flex-col gap-[30px]">
                 <div className="flex flex-col gap-[30px] text-center xl:text-left ">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
                 </div>
                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                   {skills.items.map((item, index) => {

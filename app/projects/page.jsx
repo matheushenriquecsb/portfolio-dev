@@ -25,7 +25,7 @@ import {
 const projects1 = {
   num: "01",
   category: "Tomato Restaurant",
-  title: "Project FullStack",
+  title: "Projeto Pessoal FullStack",
   description:
     "Plataforma de e-commerce para um restaurante, permitindo que os usuários naveguem pelo cardápio, adicionem itens ao carrinho, se cadastrem, façam login e finalizem a compra com pagamento seguro via Stripe.",
   stack: [
@@ -46,7 +46,7 @@ const projects1 = {
 const projects2 = {
   num: "02",
   category: "Booking Website",
-  title: "Project FullStack",
+  title: "Projeto Pessoal FullStack",
   description:
     "Aplicação para gerenciamento de reservas de hotéis, com autenticação segura via OAuth (GitHub e Google). Permite que usuários façam login facilmente e, após autenticados, explorem acomodações, escolham datas e selecionem o número de quartos, oferecendo uma experiência de reserva intuitiva e eficiente.",
   stack: [
@@ -140,7 +140,7 @@ const Work = () => {
                       src={projects1.image}
                       fill
                       className="object-cover"
-                      alt=""
+                      alt="project1-image"
                     />
                   </div>
                 </div>
@@ -222,7 +222,7 @@ const Work = () => {
                       src={projects2.image}
                       fill
                       className="object-cover"
-                      alt=""
+                      alt="project2-image"
                     />
                   </div>
                 </div>

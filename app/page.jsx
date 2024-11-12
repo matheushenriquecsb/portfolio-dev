@@ -17,8 +17,8 @@ const Home = () => {
             </h2>
             <p className="max-w-[500px] mb-9 text-white/80">
               +3 anos de experiência no desenvolvimento de aplicações web,
-              atuando com as stack do Node e React. Trabalhei no desenvolvimento
-              e manutenção de APIs RESTful eficientes e escaláveis, além de
+              atuando com as stack do Node e React. Atuei no desenvolvimento e
+              manutenção de APIs RESTful eficientes e escaláveis, além de
               desenvolver interfaces interativas e de alto desempenho, focadas
               na experiência do usuário.
             </p>
