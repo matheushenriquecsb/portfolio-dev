@@ -130,16 +130,16 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[50%] hidden md:block">
             <div className="xl:h-[500px] mb-12">
               <div className="w-full">
-                <div className="h-[420px] w-[730px] relative group flex justify-center items-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full h-full">
+                <div className="h-[500px] w-[600px] relative group flex justify-center items-center">
+                  <div className="absolute top-0 bottom-0 w-full h-full z-10"></div>
+                  <div className="relative h-[70%] w-[120%]">
                     <Image
                       src={projects1.image}
                       fill
-                      className="object-cover"
+                      className="object-cover h-[80px] w-[80%] "
                       alt="project1-image"
                     />
                   </div>
@@ -212,16 +212,16 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%]">
+          <div className="w-full xl:w-[50%] hidden md:block">
             <div className="xl:h-[600px] mb-12">
-              <div className="w-full h-[120%]">
-                <div className="h-[520px] w-[730px] relative group flex justify-center items-center bg-pink-50/20">
+              <div className="w-full h-[100%]">
+                <div className="h-[500px] w-[600px] relative group flex justify-center items-center">
                   <div className="absolute top-0 bottom-0 w-full h-[110%] z-10"></div>
-                  <div className="relative w-full h-full">
+                  <div className="relative h-[80%] w-[100%]">
                     <Image
                       src={projects2.image}
                       fill
-                      className="object-cover"
+                      className="object-cover "
                       alt="project2-image"
                     />
                   </div>
