@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
-      <motion.div
+      <div
         animate={{
           opacity: 1,
           transition: { delay: 2, duration: 3.4, ease: "easeInOut" },
@@ -22,7 +21,7 @@ const Photo = () => {
             className="object-contain"
           />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };

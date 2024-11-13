@@ -3,10 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
-import { FormEvent, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   FaEnvelope,
   FaMapMarkedAlt,
@@ -65,7 +63,6 @@ const Contact = () => {
         process.env.NEXT_PUBLIC_PUBLIC_KEY
       );
 
-      // Mostrar mensagem de sucesso
       setSuccess(true);
       setTimeout(() => {
         setSuccess(false);
@@ -81,14 +78,7 @@ const Contact = () => {
   };
 
   return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{
-        opacity: 1,
-        transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-      }}
-      className="py-6"
-    >
+    <div className="py-6">
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
           <div className="xl:h-[54%] order-2 xl:order-none">
@@ -141,7 +131,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </div>
   );
 };
 

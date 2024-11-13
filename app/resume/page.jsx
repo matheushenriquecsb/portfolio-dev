@@ -67,7 +67,7 @@ const about = {
 };
 
 const experiencies = {
-  title: "Experiências Profissionais",
+  title: "Experiências",
   items: [
     {
       company: "Ápice Soluções",
@@ -86,7 +86,6 @@ const experiencies = {
       duration: "2024 - present",
       stacks: [
         { name: "Node", icons: <FaNodeJs /> },
-        { name: "Javascript", icons: <FaJs /> },
         { name: "Mongo", icons: <SiMongodb /> },
         { name: "Docker", icons: <FaDocker /> },
         { name: "Vtex", icons: <SiVtex /> },
@@ -248,11 +247,11 @@ const Resume = () => {
                             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                               {item.stacks.map((item, index) => {
                                 return (
-                                  <li key={index}>
+                                  <li key={index} className="hidden md:block">
                                     <TooltipProvider delayDuration={100}>
                                       <Tooltip>
                                         <TooltipTrigger className="w-full h-[30px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                          <div className=" text-3xl pb-8 group-hover:text-accent transition-all duration-300">
+                                          <div className=" text-3xl pb-8 group-hover:text-accent transition-all duration-300 xl:text-2xl">
                                             {item.icons}
                                           </div>
                                         </TooltipTrigger>
