@@ -95,7 +95,7 @@ const experiencies = {
 };
 
 const education = {
-  title: "Formações e cursos",
+  title: "Formações",
   items: [
     {
       instituion: "Unifacs",
@@ -226,7 +226,7 @@ const Resume = () => {
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experiencies.title}</h3>
-                <ScrollArea className="h-[400px] w-[750px]">
+                <ScrollArea className="h-[400px] ">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {experiencies.items.map((item, index) => {
                       return (
@@ -239,7 +239,7 @@ const Resume = () => {
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
-                          <h3 className="text-xl max-w-[280px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-xl max-w-[290px] min-h-[70px] text-center lg:text-left">
                             {item.position}
                           </h3>
 
@@ -283,7 +283,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[194px] w-[350px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[190px] w-[400px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-[17px] max-w-[260px] leading-normal min-h-[55px] text-center lg:text-left">
