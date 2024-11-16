@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Photo = () => {
   return (
-    <div className="w-full h-full relative">
+    <div className="w-full h-full relative hidden md:block">
       <div
         animate={{
           opacity: 1,

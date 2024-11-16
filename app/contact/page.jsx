@@ -3,6 +3,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Alert from "@mui/material/Alert";
+import Stack from "@mui/material/Stack";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import {
@@ -107,7 +109,27 @@ const Contact = () => {
                 name="message"
                 placeholder="Digite uma mensagem"
               />
-              <Button size="md" type="submit" className="max-w-40">
+              <div className="flex-1 items-center text-center px-15">
+                {error && (
+                  <Stack sx={{ width: "100%" }} spacing={2}>
+                    <Alert variant="filled" severity="error">
+                      Error
+                    </Alert>
+                  </Stack>
+                )}
+                {success && (
+                  <Stack sx={{ width: "100%" }} spacing={2}>
+                    <Alert
+                      variant="filled"
+                      severity="success"
+                      className="bg-accent text-primary"
+                    >
+                      Sucesso
+                    </Alert>
+                  </Stack>
+                )}
+              </div>
+              <Button size="md" type="submit" className="max-w-50">
                 Enviar
               </Button>
             </form>
