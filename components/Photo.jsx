@@ -11,9 +11,9 @@ const Photo = () => {
           transition: { delay: 2, duration: 3.4, ease: "easeInOut" },
         }}
       >
-        <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten">
+        <div className="w-[298px] h-[298px] xl:w-[598px] xl:h-[598px] mix-blend-lighten">
           <Image
-            src="/assets/profile.png"
+            src="/assets/test.png"
             priority
             quality={100}
             fill

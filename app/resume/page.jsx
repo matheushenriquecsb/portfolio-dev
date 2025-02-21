@@ -239,9 +239,9 @@ const Resume = () => {
                             <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                             <p className="text-white/60">{item.company}</p>
                           </div>
-                          <h3 className="text-xl max-w-[290px] min-h-[70px] text-center lg:text-left">
+                          <h5 className="text-[18px] max-w-[290px] min-h-[70px] text-center lg:text-left">
                             {item.position}
-                          </h3>
+                          </h5>
 
                           <div className="flex items-center gap-3 ">
                             <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
