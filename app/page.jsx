@@ -24,7 +24,7 @@ const Home = () => {
               na experiência do usuário.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href={"/assets/Curriculo.pdf"} target="_blank">
+              <Link href={"/assets/FullStackCurriculo.pdf"} target="_blank">
                 <Button
                   variant="outline"
                   size="lg"

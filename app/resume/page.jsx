@@ -17,7 +17,9 @@ import {
   SiNextdotjs,
   SiPrisma,
   SiTypeorm,
+  SiKubernetes,
   SiVtex,
+  SiRabbitmq 
 } from "react-icons/si";
 
 import { DiLaravel, DiMongodb, DiPostgresql, DiRedis } from "react-icons/di";
@@ -142,12 +144,12 @@ const skills = {
       name: "Typescript",
     },
     {
-      icons: <FaPhp />,
-      name: "PHP",
+      icons: <SiNestjs />,
+      name: "NestJs",
     },
     {
-      icons: <DiLaravel />,
-      name: "Laravel",
+      icons: <FaNodeJs />,
+      name: "NodeJs",
     },
     {
       icons: <FaReact />,
@@ -158,16 +160,16 @@ const skills = {
       name: "Next",
     },
     {
-      icons: <SiNestjs />,
-      name: "NestJs",
-    },
-    {
-      icons: <FaNodeJs />,
-      name: "NodeJs",
-    },
-    {
       icons: <SiExpress />,
       name: "Express",
+    },
+    {
+      icons: <FaPhp />,
+      name: "PHP",
+    },
+    {
+      icons: <DiLaravel />,
+      name: "Laravel",
     },
     {
       icons: <FaDocker />,
@@ -176,6 +178,14 @@ const skills = {
     {
       icons: <FaAws />,
       name: "AWS",
+    },
+    {
+      icons: <SiKubernetes />,
+      name: "Kubernetes",
+    },
+    {
+      icons: <SiRabbitmq />,
+      name: "RabbitMQ",
     },
     {
       icons: <DiPostgresql />,
@@ -218,7 +228,7 @@ const Resume = () => {
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="experience">Experiência</TabsTrigger>
-            <TabsTrigger value="education">Formação Acadêmica</TabsTrigger>
+            <TabsTrigger value="education">Formações e Certificações</TabsTrigger>
             <TabsTrigger value="skills">Tech Skills</TabsTrigger>
             <TabsTrigger value="about">Sobre</TabsTrigger>
           </TabsList>
