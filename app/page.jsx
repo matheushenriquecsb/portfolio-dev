@@ -17,11 +17,9 @@ const Home = () => {
               <span className="text-accent">Matheus Henrique</span>
             </h2>
             <p className="max-w-[500px] mb-9 text-white/80">
-              +3 anos de experiência no desenvolvimento de aplicações web,
-              atuando com as stack do Node e React. Atuei no desenvolvimento e
-              manutenção de APIs RESTful eficientes e escaláveis, além de
-              desenvolver interfaces interativas e de alto desempenho, focadas
-              na experiência do usuário.
+              Desenvolvedor com 4+ anos de experiência em aplicações web,
+              especializado em APIs RESTful, arquiteturas escaláveis e
+              interfaces focadas em performance e UX.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link href={"/assets/FullStackCurriculo.pdf"} target="_blank">

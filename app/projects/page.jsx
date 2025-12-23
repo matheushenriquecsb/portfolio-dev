@@ -7,11 +7,12 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Link from "next/link";
+import { LuScreenShare } from "react-icons/lu";
 
 import Image from "next/image";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
-import { BiLogoTypescript } from "react-icons/bi";
+import { BiBorderRadius, BiLogoTypescript } from "react-icons/bi";
 import { DiMongodb, DiPostgresql, DiRedis } from "react-icons/di";
 import { FaCcStripe, FaNodeJs } from "react-icons/fa";
 import {
@@ -22,8 +23,7 @@ import {
   SiTypeorm,
 } from "react-icons/si";
 
-const projects1 = {
-  num: "01",
+const projects1 = { 
   category: "Tomato Restaurant",
   title: "Projeto Pessoal FullStack",
   description:
@@ -43,8 +43,7 @@ const projects1 = {
   github: "https://github.com/matheushenriquecsb/food-delivery-react",
 };
 
-const projects2 = {
-  num: "02",
+const projects2 = { 
   category: "Booking Website",
   title: "Projeto Pessoal FullStack",
   description:
@@ -70,10 +69,7 @@ const Work = () => {
       <div className="container mx-auto mb-25 mt-12">
         <div className="flex flex-col xl:flex-row xl:gap-[30px] mb-24">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-outline">
-                {projects1.num}
-              </div>
+            <div className="flex flex-col gap-[30px] h-[50%]"> 
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {projects1.category}
               </h2>
@@ -107,10 +103,10 @@ const Work = () => {
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        <LuScreenShare className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live Project</p>
+                        <p>Acesse o projeto</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -122,7 +118,7 @@ const Work = () => {
                         <BsGithub className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Github Repository</p>
+                        <p>Repositório Github</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
@@ -130,17 +126,17 @@ const Work = () => {
               </div>
             </div>
           </div>
-          <div className="w-full xl:w-[50%] hidden md:block">
+          <div className="w-full xl:w-[50%] hidden md:block   ">
             <div className="xl:h-[500px] mb-12">
               <div className="w-full">
-                <div className="h-[500px] w-[600px] relative group flex justify-center items-center">
+                <div className="h-[500px] w-[600px] relative group flex justify-center">
                   <div className="absolute top-0 bottom-0 w-full h-full z-10"></div>
                   <div className="relative h-[70%] w-[120%]">
                     <Image
                       src={projects1.image}
                       fill
-                      className="object-cover h-[80px] w-[80%] "
-                      alt="project1-image"
+                      className="object-cover h-[80px] w-[80%] rounded-sm"
+                      alt="project1-image"  
                     />
                   </div>
                 </div>
@@ -152,10 +148,7 @@ const Work = () => {
       <div className="container mx-auto mt-24">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]  mt-27 ">
           <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-            <div className="flex flex-col gap-[30px] h-[50%]">
-              <div className="text-8xl leading-none font-extrabold text-outline">
-                {projects2.num}
-              </div>
+            <div className="flex flex-col gap-[30px] h-[50%]"> 
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
                 {projects2.category}
               </h2>
