@@ -254,7 +254,10 @@ const Resume = () => {
                           </h5>
                           {item.description.map((item, index) => {
                             return (
-                              <div className="flex items-center gap-3 mb-7">
+                              <div
+                                key={index}
+                                className="flex items-center gap-3 mb-7"
+                              >
                                 <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                                 <p className="text-white/60">{item.name}</p>
                               </div>
