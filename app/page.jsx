@@ -22,7 +22,7 @@ const Home = () => {
               interfaces focadas em performance e UX.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Link href={"/assets/FullStackCurriculo.pdf"} target="_blank">
+              <Link href={"/assets/curriculo-fullstack.pdf"} target="_blank">
                 <Button
                   variant="outline"
                   size="lg"
